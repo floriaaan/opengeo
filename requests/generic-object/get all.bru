@@ -1,0 +1,18 @@
+meta {
+  name: get all
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/generic-object/get
+  body: none
+  auth: none
+}
+
+assert {
+  res.body.data: isDefined
+  res.body.data.length: gte 0
+  res.body.error: isNull
+  res.status: eq 200
+}

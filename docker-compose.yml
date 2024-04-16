@@ -1,0 +1,33 @@
+version: "3.7"
+
+networks:
+  opengeo-network:
+
+volumes:
+  database-data:
+
+services:
+  mongo:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: user
+      MONGO_INITDB_ROOT_PASSWORD: pass
+    networks:
+      - opengeo-network
+    volumes:
+      - database-data:/data/db
+    ports:
+      - 27017:27017
+    restart: unless-stopped
+
+  mongoex:
+    image: mongo-express:1.0.0-alpha.4
+    restart: unless-stopped
+    depends_on:
+      - mongo
+    networks:
+      - opengeo-network
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_URL: mongodb://user:pass@mongo:27017/

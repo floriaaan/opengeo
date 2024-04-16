@@ -1,0 +1,17 @@
+meta {
+  name: get all
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/sub-object/get
+  body: none
+  auth: none
+}
+
+assert {
+  res.body.data: isDefined
+  res.body.error: isNull
+  res.status: eq 200
+}

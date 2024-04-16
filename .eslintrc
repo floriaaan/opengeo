@@ -1,0 +1,20 @@
+{
+  "extends": ["eslint:recommended", "next/core-web-vitals", "plugin:prettier/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "root": true,
+  "rules": {
+    "no-console": "warn",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "prettier/prettier": "warn"
+  },
+  "globals": {
+    "JSX": "readonly",
+    "RequestInfo": "readonly",
+    "RequestInit": "readonly"
+  },
+  "env": {
+    "jest": true
+  }
+}

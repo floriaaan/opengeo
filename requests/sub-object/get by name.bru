@@ -1,0 +1,21 @@
+meta {
+  name: get by name
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/sub-object/get?name=irve
+  body: none
+  auth: none
+}
+
+query {
+  name: irve
+}
+
+assert {
+  res.body.data: isDefined
+  res.body.error: isNull
+  res.status: eq 200
+}

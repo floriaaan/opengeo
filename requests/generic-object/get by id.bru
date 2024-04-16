@@ -1,0 +1,21 @@
+meta {
+  name: get by id
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/generic-object/get?id=65a68155f97f8e73b3ac5e80
+  body: none
+  auth: none
+}
+
+query {
+  id: 65a68155f97f8e73b3ac5e80
+}
+
+assert {
+  res.body.data: isDefined
+  res.body.error: isNull
+  res.status: eq 200
+}
