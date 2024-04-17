@@ -17,7 +17,7 @@ import {
   ToggleGroup,
   ToggleGroupItem,
 } from "@components/ui";
-import { MagnifyingGlassIcon, ReloadIcon } from "@radix-ui/react-icons";
+import { RefreshCwIcon, SearchIcon } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
 const GenericObjectIndexPage = () => {
@@ -59,7 +59,7 @@ const GenericObjectIndexPage = () => {
       <div className="flex flex-row items-center justify-between w-full gap-x-2">
         <div className="flex flex-col gap-2 md:w-full md:items-center md:justify-start md:flex-row">
           <div className="relative w-96">
-            <MagnifyingGlassIcon className="absolute w-4 h-4 transform -translate-y-1/2 pointer-events-none top-1/2 left-3" />
+            <SearchIcon className="absolute w-4 h-4 transform -translate-y-1/2 pointer-events-none top-1/2 left-3" />
             <Input
               className="pl-[2.25rem]"
               value={search}
@@ -87,7 +87,7 @@ const GenericObjectIndexPage = () => {
         </div>
         <div className="inline-flex items-center gap-2">
           <Button onClick={revalidate} disabled={loading}>
-            <ReloadIcon className={cn("mr-2 h-4 w-4", loading && "animate-spin")} />
+            <RefreshCwIcon className={cn("mr-2 h-4 w-4", loading && "animate-spin")} />
             Rafraîchir
           </Button>
         </div>

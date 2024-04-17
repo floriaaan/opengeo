@@ -1,22 +1,22 @@
 import { log } from "@/lib/log";
 import { GenericField, GenericFieldValue } from "@/types/generic-object";
 import { Button, Input, Select, SelectContent, SelectItem, SelectTrigger, SelectValue, Switch } from "@components/ui";
-import { CalculatorIcon } from "@components/ui/icons/calculator";
 
+import { regions } from "@resources/regions";
 import {
+  AlignLeftIcon,
   BackpackIcon,
+  CalculatorIcon,
   CalendarIcon,
-  CheckCircledIcon,
-  Cross2Icon,
-  DragHandleHorizontalIcon,
-  ExclamationTriangleIcon,
+  CircleCheckIcon,
   FileIcon,
   GlobeIcon,
+  GripIcon,
+  PinIcon,
   PlusIcon,
-  SewingPinIcon,
-  TextAlignLeftIcon,
-} from "@radix-ui/react-icons";
-import { regions } from "@resources/regions";
+  TriangleAlertIcon,
+  XIcon,
+} from "lucide-react";
 import { Dispatch, useEffect, useRef } from "react";
 import { toast } from "sonner";
 
@@ -54,7 +54,6 @@ export const GenericObjectValuesInputWrapper = ({
         duration: 5 * 1000,
         dismissible: true,
         style: { width: "1024px", left: "0", bottom: "0", padding: "16px", backgroundColor: "#F0F8FFDD" },
-        cancel: { label: "Fermer" },
         cancelButtonStyle: { backgroundColor: "#0973DC", color: "#F0F8FF" },
       },
     );
@@ -70,7 +69,7 @@ export const GenericObjectValuesInputWrapper = ({
       </div>
       {data.length === 0 && (
         <div className="flex items-center gap-2 p-2 border border-gray-300 rounded">
-          <ExclamationTriangleIcon className="w-4 h-4" />
+          <TriangleAlertIcon className="w-4 h-4" />
           <h4 className="text-sm">Pas de champs renseignés</h4>
         </div>
       )}
@@ -186,15 +185,15 @@ const ModularInput = ({
         onDragEnd={drop}
         draggable
       >
-        <DragHandleHorizontalIcon className="w-5 h-5" />
+        <GripIcon className="w-5 h-5" />
       </div>
       <div className="relative w-4/12">
         <label>
-          {type === "string" && <TextAlignLeftIcon className={icon_classnames} />}
+          {type === "string" && <AlignLeftIcon className={icon_classnames} />}
           {type === "date" && <CalendarIcon className={icon_classnames} />}
           {type === "number" && <CalculatorIcon className={icon_classnames} />}
-          {type === "boolean" && <CheckCircledIcon className={icon_classnames} />}
-          {type === "coordinates" && <SewingPinIcon className={icon_classnames} />}
+          {type === "boolean" && <CircleCheckIcon className={icon_classnames} />}
+          {type === "coordinates" && <PinIcon className={icon_classnames} />}
           {type === "entity" && <BackpackIcon className={icon_classnames} />}
           {type === "file" && <FileIcon className={icon_classnames} />}
           {type === "url" && <GlobeIcon className={icon_classnames} />}
@@ -299,7 +298,7 @@ const ModularInput = ({
           size="icon"
           onClick={() => removeInput(label)}
         >
-          <Cross2Icon className="w-3 h-3" />
+          <XIcon className="w-3 h-3" />
         </Button>
       </div>
     </div>

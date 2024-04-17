@@ -1,4 +1,4 @@
-import { CaretSortIcon, UpdateIcon } from "@radix-ui/react-icons";
+import { ArrowUpDownIcon, RefreshCwIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
@@ -30,7 +30,7 @@ export const Histories = ({ data, loading }: { data?: HistoryType[]; loading: bo
     >
       <CardHeader className="flex flex-row items-center justify-between p-0 space-y-0">
         <CardTitle className="text-sm font-medium">Mises à jour des données</CardTitle>
-        <UpdateIcon className="w-4 h-4 text-muted-foreground" />
+        <RefreshCwIcon className="w-4 h-4 text-muted-foreground" />
       </CardHeader>
       <div className="flex flex-col w-full pr-2 overflow-y-scroll h-96 gap-y-1 max-h-96">
         {loading
@@ -62,7 +62,7 @@ const HistoryDayCollapsible = ({ date, histories }: { date: string; histories: H
             <span className="text-sm font-semibold text-gray-500">+{histories.length - 1}</span>
             <CollapsibleTrigger asChild>
               <Button variant="ghost" size="sm">
-                <CaretSortIcon className="w-4 h-4" />
+                <ArrowUpDownIcon className="w-4 h-4" />
                 <span className="sr-only">Toggle</span>
               </Button>
             </CollapsibleTrigger>

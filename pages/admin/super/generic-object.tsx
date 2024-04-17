@@ -11,7 +11,7 @@ import { getEntityFromContact } from "@/lib/user";
 import { GenericObjectCard } from "@components/admin/generic-object/card";
 import { HeadTitle } from "@components/helpers/head/title";
 import { LargeLoader } from "@components/ui/loader/large";
-import { UpdateIcon } from "@radix-ui/react-icons";
+import { RefreshCwIcon } from "lucide-react";
 
 /**
  * A React component that renders a page for displaying the details of a all site for super-administation.
@@ -46,7 +46,7 @@ const SiteDetailPage = () => {
                 Gestion des objets
               </h1>
               <span className="px-3 py-1 mt-1 text-xs font-bold text-white flex-nowrap w-fit rounded-2xl bg-opengeo font-title">
-                {isLoading ? <UpdateIcon className="w-3 h-3 animate-spin" /> : objects.length}
+                {isLoading ? <RefreshCwIcon className="w-3 h-3 animate-spin" /> : objects.length}
               </span>
             </div>
 

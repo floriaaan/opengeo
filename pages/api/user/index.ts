@@ -1,4 +1,4 @@
-import { apigile_contact } from "@/lib/fetchers/apigile";
+import { contact } from "@/lib/fetchers/contact";
 import withDatabase from "@/lib/mongo/middleware";
 import { Habilitation, HabilitationDocument } from "@/models/Habilitation";
 import { UserPreferences, UserPreferencesDocument } from "@/models/UserPreferences";
@@ -22,9 +22,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<APIResult<User>
     const complete = req.query.complete === "true" ? true : false;
 
     try {
-      const contact_data = complete
-        ? await apigile_contact(id, access_token).catch(() => undefined)
-        : undefined;
+      const contact_data = complete ? await contact(id, access_token).catch(() => undefined) : undefined;
 
       const habilitation = await Habilitation.findOne({ "user.id": id });
       const preferences = await UserPreferences.findOne({ "user.id": id });

@@ -13,7 +13,7 @@ import {
   DialogTrigger,
   ScrollArea,
 } from "@components/ui";
-import { EyeOpenIcon, Pencil1Icon } from "@radix-ui/react-icons";
+import { EyeIcon, PencilIcon } from "lucide-react";
 import Link from "next/link";
 
 /**
@@ -76,13 +76,13 @@ export const GenericObjectCard = (props: GenericObject & { isLink?: boolean }) =
           <div className="inline-flex items-center gap-2 mr-6">
             <Button variant="outline" asChild>
               <Link href={`/generic-object/${props._id}`}>
-                <EyeOpenIcon className="w-4 h-4" />
+                <EyeIcon className="w-4 h-4" />
                 Voir
               </Link>
             </Button>
             <Button variant="outline" asChild>
               <Link href={`/admin/plugins/generic-object/${props._id}`}>
-                <Pencil1Icon className="w-4 h-4" />
+                <PencilIcon className="w-4 h-4" />
                 Modifier
               </Link>
             </Button>

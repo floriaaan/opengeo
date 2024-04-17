@@ -1,5 +1,4 @@
-import { MapIcon } from "@components/ui/icons/map";
-import { MixerVerticalIcon } from "@radix-ui/react-icons";
+import { MapIcon, SlidersVerticalIcon } from "lucide-react";
 
 type ModuleRoute = {
   basePath: string;
@@ -13,7 +12,7 @@ type ModuleRoute = {
 };
 const cls = { className: "w-4 h-4 " };
 
-const maintenance_routes: ModuleRoute = {
+const bases_routes: ModuleRoute = {
   basePath: "/",
   title: "OpenGeo",
   icon: <MapIcon {...cls} />,
@@ -32,7 +31,7 @@ const maintenance_routes: ModuleRoute = {
 const admin_routes: ModuleRoute = {
   basePath: "/admin",
   title: "Administration",
-  icon: <MixerVerticalIcon {...cls} />,
+  icon: <SlidersVerticalIcon {...cls} />,
   routes: [
     {
       path: "/",
@@ -53,4 +52,4 @@ const admin_routes: ModuleRoute = {
   ],
 };
 
-export const app_routes = [maintenance_routes, admin_routes];
+export const app_routes = [bases_routes, admin_routes];

@@ -4,7 +4,7 @@ import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { Logo } from "@components/ui/Logo";
 import { Button } from "@components/ui/button";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
+import { ArrowRightIcon } from "lucide-react";
 
 const Line = ({ className }: { className?: string }) => {
   return (

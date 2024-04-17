@@ -13,7 +13,7 @@ import {
   DialogTrigger,
 } from "@components/ui/dialog";
 import { ScrollArea } from "@components/ui/scroll-area";
-import { Pencil1Icon } from "@radix-ui/react-icons";
+import { PencilIcon } from "lucide-react";
 import Link from "next/link";
 
 /**
@@ -70,7 +70,7 @@ export const SubObjectCard = (props: SubObjectType & { isLink?: boolean }) =>
           <div className="mr-6">
             <Button variant="outline" asChild>
               <Link href={`/admin/plugins/sub-object/${props._id}`}>
-                <Pencil1Icon className="w-4 h-4" />
+                <PencilIcon className="w-4 h-4" />
                 Modifier
               </Link>
             </Button>

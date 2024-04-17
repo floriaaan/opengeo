@@ -4,8 +4,8 @@ import { HabilitationDemandeDocument, HabilitationDocument } from "@/models/Habi
 import { roles } from "@components/habilitations/roles";
 import { Avatar, AvatarFallback } from "@components/ui/avatar";
 import { Button } from "@components/ui/button";
-import { CheckIcon, TrashIcon } from "@radix-ui/react-icons";
 import { CellContext, ColumnDef } from "@tanstack/react-table";
+import { CheckIcon, TrashIcon } from "lucide-react";
 
 export const columns_habilitationDemande: ColumnDef<HabilitationDemandeDocument>[] = [
   {

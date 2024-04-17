@@ -15,7 +15,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@components/ui";
-import { ArrowLeftIcon, Cross1Icon, EyeOpenIcon, TrashIcon } from "@radix-ui/react-icons";
+import { ArrowLeftIcon, EyeIcon, TrashIcon, XIcon } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -109,7 +109,7 @@ export const GenericObjectUpdate = ({ data: object }: { data: GenericObject }) =
               <div className="inline-flex items-center gap-2">
                 <Button variant="outline" asChild>
                   <Link href={`/generic-object/${object._id}`}>
-                    <EyeOpenIcon className="w-4 h-4" />
+                    <EyeIcon className="w-4 h-4" />
                     {"Voir l'objet"}
                   </Link>
                 </Button>
@@ -135,7 +135,7 @@ export const GenericObjectUpdate = ({ data: object }: { data: GenericObject }) =
           <div className="inline-flex items-center justify-end gap-2">
             <DialogClose asChild>
               <Button variant="outline">
-                <Cross1Icon className="w-4 h-4" />
+                <XIcon className="w-4 h-4" />
                 Annuler
               </Button>
             </DialogClose>

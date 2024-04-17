@@ -9,7 +9,6 @@ import { VisitsChart } from "@components/admin/dashboard/visits";
 import { HeadTitle } from "@components/helpers/head/title";
 import { AdminLayout } from "@components/layouts/admin";
 import { Button } from "@components/ui/button";
-import { UpdateIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
 import {
   Boxes,
@@ -18,6 +17,7 @@ import {
   CalendarDaysIcon,
   CalendarFold,
   LockKeyhole,
+  RefreshCwIcon,
   Shapes,
 } from "lucide-react";
 import { NextPage } from "next";
@@ -70,7 +70,7 @@ const Admin: NextPage = () => {
             </div>
             <div className="inline-flex items-center px-2 py-2 mt-4 space-x-4 w-fit">
               <Button onClick={revalidate} disabled={loading}>
-                <UpdateIcon className={classNames("w-4 h-4", loading && "animate-spin")} />
+                <RefreshCwIcon className={classNames("w-4 h-4", loading && "animate-spin")} />
                 Rafraîchir
               </Button>
             </div>

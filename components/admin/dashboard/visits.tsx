@@ -1,9 +1,9 @@
 import { cn } from "@/lib/utils";
 import { ResultGET } from "@/pages/api/admin";
 import { Card } from "@components/ui";
-import { QuestionMarkCircledIcon } from "@radix-ui/react-icons";
 import { format } from "date-fns";
 import { fr } from "date-fns/locale";
+import { MessageCircleQuestionIcon } from "lucide-react";
 import { Area, AreaChart, ResponsiveContainer, YAxis } from "recharts";
 
 export const dates = {
@@ -60,7 +60,7 @@ export const VisitsChart = ({ data, loading }: { data: ResultGET["visits"]; load
         </div>
       </div>
       <div className="absolute top-0 right-0 m-3 group">
-        <QuestionMarkCircledIcon className="w-4 h-4 text-muted-foreground" />
+        <MessageCircleQuestionIcon className="w-4 h-4 text-muted-foreground" />
         <span className="mt-2 absolute w-auto p-2 text-xs text-white transition-all inline-flex items-center gap-x-1 duration-100 origin-top scale-0 bg-gray-900 rounded-md shadow-md min-w-max right-0 group-hover:scale-100 z-[61]">
           <span>Les visites sont comptabilisées du</span>
           <strong>{format(dates.last, "dd/MM/yyyy", { locale: fr })}</strong>

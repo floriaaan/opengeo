@@ -8,8 +8,8 @@ import { useCartographie } from "@components/map/context";
 import { Suggestion } from "@components/suggestion/dialog";
 import { Badge } from "@components/ui/badge";
 import { Button } from "@components/ui/button";
-import { ExternalLinkIcon, EyeOpenIcon, Pencil1Icon } from "@radix-ui/react-icons";
 import { ScrollArea } from "@radix-ui/react-scroll-area";
+import { ExternalLinkIcon, EyeIcon, PencilIcon } from "lucide-react";
 import Link from "next/link";
 import { useMemo } from "react";
 
@@ -55,14 +55,14 @@ export const Information = ({ object }: { object: GenericObject; setSelectedSite
         <div className="flex flex-row-reverse items-center gap-x-2">
           <Button asChild variant="default">
             <Link href={`/generic-object/${object._id}`} className="">
-              <EyeOpenIcon className="w-4 h-4" />
+              <EyeIcon className="w-4 h-4" />
               Voir le détail
             </Link>
           </Button>
           {canHaveAccess(object.metadata.entity, 100) && (
             <Button variant="outline" asChild>
               <Link href={`/admin/plugins/generic-object/${object._id}`}>
-                <Pencil1Icon className="w-4 h-4" />
+                <PencilIcon className="w-4 h-4" />
                 <span>Modifier</span>
               </Link>
             </Button>

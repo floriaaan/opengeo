@@ -7,8 +7,8 @@ import { SuggestionDialog } from "@components/admin/suggestion/dialog";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Avatar, AvatarFallback } from "@components/ui/avatar";
 import { Button } from "@components/ui/button";
-import { CheckIcon, TrashIcon } from "@radix-ui/react-icons";
 import { CellContext, ColumnDef } from "@tanstack/react-table";
+import { CheckIcon, TrashIcon } from "lucide-react";
 import { toast } from "sonner";
 
 export const columns_suggestions: ColumnDef<SuggestionDocument & { original: GenericObjectDocument }>[] = [

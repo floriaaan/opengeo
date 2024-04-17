@@ -3,7 +3,7 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@components/ui/button";
-import { Cross2Icon } from "@radix-ui/react-icons";
+import { XIcon } from "lucide-react";
 
 const alertVariants = cva(
   "relative w-full shadow-lg rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground",
@@ -43,7 +43,7 @@ const Alert = React.forwardRef<
         onClick={() => setShow(false)}
         className={cn("absolute hover:bg-neutral-200 top-1 right-1 w-6 h-6 pl-0")}
       >
-        <Cross2Icon className="w-4 h-4" />
+        <XIcon className="w-4 h-4" />
       </Button>
       {props.children}
     </div>
@@ -66,3 +66,4 @@ const AlertDescription = React.forwardRef<HTMLParagraphElement, React.HTMLAttrib
 AlertDescription.displayName = "AlertDescription";
 
 export { Alert, AlertDescription, AlertTitle };
+

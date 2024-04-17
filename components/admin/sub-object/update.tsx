@@ -18,7 +18,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@components/ui/dialog";
-import { Cross1Icon, TrashIcon } from "@radix-ui/react-icons";
+import { TrashIcon, XIcon } from "lucide-react";
 
 /**
  * A React component that renders a form for updating a sub-object in the domain management page.
@@ -117,7 +117,7 @@ export const SubObjectUpdate = (subObject: SubObjectType) => {
           <div className="inline-flex items-center justify-end gap-2">
             <DialogClose asChild>
               <Button variant="outline">
-                <Cross1Icon className="w-4 h-4" />
+                <XIcon className="w-4 h-4" />
                 Annuler
               </Button>
             </DialogClose>

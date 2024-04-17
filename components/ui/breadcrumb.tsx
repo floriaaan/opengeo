@@ -12,7 +12,7 @@ import {
 } from "@components/ui/dropdown-menu";
 import { Input } from "@components/ui/input";
 import { ScrollArea } from "@components/ui/scroll-area";
-import { CheckCircledIcon, ChevronDownIcon, HomeIcon } from "@radix-ui/react-icons";
+import { ChevronDownIcon, CircleCheckIcon, HomeIcon } from "lucide-react";
 import Link from "next/link";
 import { ReactNode, useEffect, useRef, useState } from "react";
 
@@ -200,7 +200,7 @@ const Item = ({
                       >
                         <div className="inline-flex items-center justify-between w-full">
                           <span className="first-letter:uppercase">{e.name}</span>
-                          {e.selected && <CheckCircledIcon className="w-5 h-5 text-opengeo-700" />}
+                          {e.selected && <CircleCheckIcon className="w-5 h-5 text-opengeo-700" />}
                         </div>
                       </DropdownMenuItem>
                     );

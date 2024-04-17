@@ -5,7 +5,7 @@ import { GenericField, GenericObject, GenericObjectMetadata } from "@/types/gene
 import { DEFAULT_GENERIC_OBJECT_METADATA } from "@/types/global";
 import { GenericObjectForm } from "@components/admin/generic-object";
 import { Button } from "@components/ui";
-import { ArrowLeftIcon } from "@radix-ui/react-icons";
+import { ArrowLeftIcon } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";

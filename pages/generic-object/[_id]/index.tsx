@@ -13,16 +13,16 @@ import { Badge } from "@components/ui/badge";
 import { Breadcrumb } from "@components/ui/breadcrumb";
 import { LargeLoader } from "@components/ui/loader/large";
 import { ScrollArea } from "@components/ui/scroll-area";
+import { regions } from "@resources/regions";
 import {
   BackpackIcon,
   ChevronDownIcon,
   ClipboardIcon,
-  CursorArrowIcon,
   ExternalLinkIcon,
-  Pencil1Icon,
-  SewingPinFilledIcon,
-} from "@radix-ui/react-icons";
-import { regions } from "@resources/regions";
+  MapPinIcon,
+  MousePointerClickIcon,
+  PencilIcon,
+} from "lucide-react";
 import { GetServerSideProps } from "next";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
@@ -158,7 +158,7 @@ const GenericObjectDetailPage = ({ _id }: { _id: string }) => {
                 {canHaveAccess(object.metadata.entity, 100) && (
                   <Button variant="outline" asChild>
                     <Link href={`/admin/plugins/generic-object/${id}`}>
-                      <Pencil1Icon className="w-4 h-4" />
+                      <PencilIcon className="w-4 h-4" />
                       <span>Modifier</span>
                     </Link>
                   </Button>
@@ -301,7 +301,7 @@ const GenericObjectBreadcrumb = ({
       pages={[
         {
           name: selectedRegion || "Toutes les régions",
-          icon: <SewingPinFilledIcon className="hidden w-4 h-4 mr-2 shrink-0 lg:block" />,
+          icon: <MapPinIcon className="hidden w-4 h-4 mr-2 shrink-0 lg:block" />,
           children: regions.map((e) => ({
             name: e || "Toutes les régions",
             onClick: () => {
@@ -334,7 +334,7 @@ const GenericObjectBreadcrumb = ({
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className="text-gray-500">
-                <CursorArrowIcon className="w-4 h-4" />
+                <MousePointerClickIcon className="w-4 h-4" />
                 Voir plus{" "}
                 <ChevronDownIcon className="w-4 h-4 group-data-[state=open]:rotate-180 transition duration-100" />
               </Button>

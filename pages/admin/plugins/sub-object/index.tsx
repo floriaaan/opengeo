@@ -11,7 +11,7 @@ import { Button } from "@components/ui";
 import { Badge } from "@components/ui/badge";
 import { Input } from "@components/ui/input";
 import { ToggleGroup, ToggleGroupItem } from "@components/ui/toggle-group";
-import { MagnifyingGlassIcon, PlusIcon, ReloadIcon } from "@radix-ui/react-icons";
+import { PlusIcon, RefreshCwIcon, SearchIcon } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 
@@ -74,7 +74,7 @@ const SubObjectIndex = () => {
       <div className="flex flex-row items-center justify-between w-full gap-x-2">
         <div className="flex flex-col gap-2 md:w-full md:items-center md:justify-start md:flex-row">
           <div className="relative w-96">
-            <MagnifyingGlassIcon className="absolute w-4 h-4 transform -translate-y-1/2 pointer-events-none top-1/2 left-3" />
+            <SearchIcon className="absolute w-4 h-4 transform -translate-y-1/2 pointer-events-none top-1/2 left-3" />
             <Input
               className="pl-[2.25rem]"
               value={search}
@@ -106,7 +106,7 @@ const SubObjectIndex = () => {
             </Link>
           </Button>
           <Button onClick={revalidate} disabled={loading}>
-            <ReloadIcon className={cn("mr-2 h-4 w-4", loading && "animate-spin")} />
+            <RefreshCwIcon className={cn("mr-2 h-4 w-4", loading && "animate-spin")} />
             Rafraîchir
           </Button>
         </div>

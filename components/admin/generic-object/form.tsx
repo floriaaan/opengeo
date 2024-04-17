@@ -2,7 +2,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { getEntityFromContact } from "@/lib/user";
 import { GenericField, GenericObject, GenericObjectMetadata } from "@/types/generic-object";
 
-import { CheckIcon, DragHandleDots2Icon, PlusIcon, UpdateIcon } from "@radix-ui/react-icons";
+import { CheckIcon, GripIcon, PlusIcon, RefreshCwIcon } from "lucide-react";
 import { Dispatch, ReactNode, SetStateAction, useEffect, useMemo, useState } from "react";
 
 import {
@@ -171,7 +171,7 @@ export const GenericObjectForm = ({
                       onClick={() => setSelectedSubObject({ [key]: g_o })}
                       className="px-2 capitalize"
                     >
-                      <DragHandleDots2Icon className="w-4 h-4" />
+                      <GripIcon className="w-4 h-4" />
                       <p>{key}</p>
                       <Badge
                         variant={(() => {
@@ -221,7 +221,7 @@ export const GenericObjectForm = ({
         <div className="inline-flex items-center justify-end gap-2">
           {actions}
           <Button onClick={handleSubmit} disabled={isLoading}>
-            {isLoading ? <UpdateIcon className="w-4 h-4 animate-spin" /> : <CheckIcon className="w-4 h-4" />}
+            {isLoading ? <RefreshCwIcon className="w-4 h-4 animate-spin" /> : <CheckIcon className="w-4 h-4" />}
             {isLoading ? "En cours..." : submitText}
           </Button>
         </div>

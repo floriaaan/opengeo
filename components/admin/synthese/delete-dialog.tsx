@@ -2,7 +2,7 @@ import { fetcher } from "@/lib/fetchers";
 import { log } from "@/lib/log";
 import { SyntheseType } from "@/types/synthese";
 import { Button, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@components/ui";
-import { Cross1Icon, TrashIcon } from "@radix-ui/react-icons";
+import { TrashIcon, XIcon } from "lucide-react";
 import { toast } from "sonner";
 
 export const SyntheseDeleteDialog = ({
@@ -39,7 +39,7 @@ export const SyntheseDeleteDialog = ({
       </DialogHeader>
       <div className="inline-flex justify-end w-full gap-2">
         <Button onClick={() => onCloseModal()} variant="outline">
-          <Cross1Icon className="w-4 h-4" />
+          <XIcon className="w-4 h-4" />
           Annuler
         </Button>
         <Button onClick={() => deleteSynthese()} variant="destructive">

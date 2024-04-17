@@ -1,6 +1,6 @@
 import { GenericObject } from "@/types/generic-object";
 import { Sidebar } from "@components/layouts/admin/sidebar";
-import { ListBulletIcon, PlusIcon } from "@radix-ui/react-icons";
+import { ListIcon, PlusIcon } from "lucide-react";
 import { ReactNode } from "react";
 
 /**
@@ -25,7 +25,7 @@ export const GenericObjectLayout = ({ children, objects }: { children: ReactNode
               {
                 name: "Liste des objets",
                 url: "/admin/plugins/generic-object",
-                icon: <ListBulletIcon className="w-4 h-4 shrink-0" />,
+                icon: <ListIcon className="w-4 h-4 shrink-0" />,
               },
               {
                 name: "Créer un nouvel objet",

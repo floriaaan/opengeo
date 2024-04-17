@@ -27,7 +27,7 @@ import {
   ToggleGroup,
   ToggleGroupItem,
 } from "@components/ui";
-import { EyeOpenIcon, MagnifyingGlassIcon, Pencil1Icon, PlusIcon, ReloadIcon, TrashIcon } from "@radix-ui/react-icons";
+import { EyeIcon, PencilIcon, PlusIcon, RefreshCwIcon, SearchIcon, TrashIcon } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
 const SynthesePage = () => {
@@ -67,7 +67,7 @@ const SynthesePage = () => {
           <div className="flex flex-row items-center justify-between w-full gap-x-2">
             <div className="flex flex-col gap-2 md:w-full md:items-center md:justify-start md:flex-row">
               <div className="relative w-96">
-                <MagnifyingGlassIcon className="absolute w-4 h-4 transform -translate-y-1/2 pointer-events-none top-1/2 left-3" />
+                <SearchIcon className="absolute w-4 h-4 transform -translate-y-1/2 pointer-events-none top-1/2 left-3" />
                 <Input
                   className="pl-[2.25rem]"
                   value={search}
@@ -103,7 +103,7 @@ const SynthesePage = () => {
                 />
               </Dialog>
               <Button onClick={revalidate} disabled={loading}>
-                <ReloadIcon className={cn("mr-2 h-4 w-4", loading && "animate-spin")} />
+                <RefreshCwIcon className={cn("mr-2 h-4 w-4", loading && "animate-spin")} />
                 Rafraîchir
               </Button>
             </div>
@@ -164,7 +164,7 @@ const SynthesePage = () => {
                                 <Dialog>
                                   <DialogTrigger asChild>
                                     <Button variant="outline" size="icon">
-                                      <EyeOpenIcon className="w-4 h-4" />
+                                      <EyeIcon className="w-4 h-4" />
                                       <span className="sr-only">Prévisualiser</span>
                                     </Button>
                                   </DialogTrigger>
@@ -176,7 +176,7 @@ const SynthesePage = () => {
                                 <Dialog>
                                   <DialogTrigger asChild>
                                     <Button variant="outline" size="icon">
-                                      <Pencil1Icon className="w-4 h-4" />
+                                      <PencilIcon className="w-4 h-4" />
                                       <span className="sr-only">Editer</span>
                                     </Button>
                                   </DialogTrigger>

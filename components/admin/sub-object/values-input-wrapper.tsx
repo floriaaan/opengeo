@@ -1,19 +1,19 @@
 import { Field } from "@/types/generic-object";
 import { Button } from "@components/ui/button";
-import { CalculatorIcon } from "@components/ui/icons/calculator";
 import { Input } from "@components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@components/ui/select";
 import {
+  AlignLeftIcon,
+  CalculatorIcon,
   CalendarIcon,
-  CheckCircledIcon,
-  Cross2Icon,
-  ExclamationTriangleIcon,
+  CircleCheckIcon,
   FileIcon,
   GlobeIcon,
+  PinIcon,
   PlusIcon,
-  SewingPinIcon,
-  TextAlignLeftIcon,
-} from "@radix-ui/react-icons";
+  TriangleAlertIcon,
+  XIcon,
+} from "lucide-react";
 
 import { Dispatch } from "react";
 
@@ -42,7 +42,7 @@ export const SubObjectValuesInputWrapper = ({ data, setData }: { data: Field[]; 
       </div>
       {data.length === 0 && (
         <div className="flex items-center gap-2 p-2 border border-gray-300 rounded">
-          <ExclamationTriangleIcon className="w-4 h-4" />
+          <TriangleAlertIcon className="w-4 h-4" />
           <h4 data-testid="fieldinput-no_input" className="text-sm">
             Pas de champs renseignés
           </h4>
@@ -110,11 +110,11 @@ const ModularInput = ({ label, type, onTypeChange, onLabelChange, removeInput }:
   return (
     <div className="flex items-center justify-between w-full gap-2 py-2 text-sm border-b last:border-b-0 ">
       <label className="relative w-1/2 text-gray-400">
-        {type === "string" && <TextAlignLeftIcon className={icon_classnames} />}
+        {type === "string" && <AlignLeftIcon className={icon_classnames} />}
         {type === "date" && <CalendarIcon className={icon_classnames} />}
         {type === "number" && <CalculatorIcon className={icon_classnames} />}
-        {type === "boolean" && <CheckCircledIcon className={icon_classnames} />}
-        {type === "coordinates" && <SewingPinIcon className={icon_classnames} />}
+        {type === "boolean" && <CircleCheckIcon className={icon_classnames} />}
+        {type === "coordinates" && <PinIcon className={icon_classnames} />}
         {type === "file" && <FileIcon className={icon_classnames} />}
         {type === "url" && <GlobeIcon className={icon_classnames} />}
         <Select
@@ -156,7 +156,7 @@ const ModularInput = ({ label, type, onTypeChange, onLabelChange, removeInput }:
           type="button"
           onClick={() => removeInput(label)}
         >
-          <Cross2Icon className="w-4 h-4" />
+          <XIcon className="w-4 h-4" />
         </Button>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import { Category, CategoryProps } from "@components/ui/link/category";
-import { Cross2Icon, HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { app_routes } from "@resources/routes";
 import classNames from "classnames";
+import { MenuIcon, XIcon } from "lucide-react";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
@@ -45,12 +45,12 @@ export const MobileMenu = () => {
         {!isMenuOpen ? (
           <>
             <span className="flex items-center justify-center w-10 h-10 rounded-full shrink-0 btn__colors">
-              <HamburgerMenuIcon className="w-4 h-4" />
+              <MenuIcon className="w-4 h-4" />
             </span>
           </>
         ) : (
           <span className="flex items-center justify-center w-10 h-10 rounded-full shrink-0 btn__colors">
-            <Cross2Icon className="w-4 h-4" />
+            <XIcon className="w-4 h-4" />
           </span>
         )}
       </button>

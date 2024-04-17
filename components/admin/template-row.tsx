@@ -2,17 +2,17 @@ import { deleteTemplateSubObject } from "@/lib/fetchers/sub-object/template";
 import { GenericObject, SubObjectTemplate } from "@/types/generic-object";
 import { Badge } from "@components/ui/badge";
 import { Button } from "@components/ui/button";
-import { TrashIcon } from "@radix-ui/react-icons";
 import { formatRelative } from "date-fns";
 import { fr } from "date-fns/locale";
+import { TrashIcon } from "lucide-react";
 
 import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
 } from "@/components/ui/dialog";
 import { ScrollArea } from "@components/ui/scroll-area";
 

@@ -8,7 +8,7 @@ import { GenericField, GenericObject } from "@/types/generic-object";
 import { Suggestion } from "@components/suggestion/dialog";
 import { Button } from "@components/ui/button";
 import { DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@components/ui/dialog";
-import { DrawingPinFilledIcon, DrawingPinIcon, ExternalLinkIcon, Pencil1Icon } from "@radix-ui/react-icons";
+import { ExternalLinkIcon, PencilIcon, PinIcon, PinOffIcon } from "lucide-react";
 import Link from "next/link";
 import { toast } from "sonner";
 
@@ -62,14 +62,14 @@ export const SubObjectDialogContent = ({
                 }
               }}
             >
-              {isPinned ? <DrawingPinFilledIcon className="w-4 h-4" /> : <DrawingPinIcon className="w-4 h-4" />}
+              {isPinned ? <PinOffIcon className="w-4 h-4" /> : <PinIcon className="w-4 h-4" />}
               <span className="sr-only">{isPinned ? "Détacher" : "Épingler"}</span>
             </Button>
           )}
           {canHaveAccess(preview.metadata.entity, 100) && (
             <Button size="icon" asChild>
               <Link href={`/admin/plugins/sub-object/${preview._id}`}>
-                <Pencil1Icon className="w-4 h-4" />
+                <PencilIcon className="w-4 h-4" />
                 <span className="sr-only">Modifier</span>
               </Link>
             </Button>

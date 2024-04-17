@@ -2,7 +2,7 @@ import { GenericField, GenericObject } from "@/types/generic-object";
 import { SuggestionForm } from "@components/suggestion/form";
 import { Button } from "@components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@components/ui/dialog";
-import { Pencil1Icon } from "@radix-ui/react-icons";
+import { PencilIcon } from "lucide-react";
 import { useState } from "react";
 
 export const Suggestion = ({ data, object, path }: { data: GenericField; object: GenericObject; path: string }) => {
@@ -15,7 +15,7 @@ export const Suggestion = ({ data, object, path }: { data: GenericField; object:
     <Dialog {...{ open, onOpenChange }}>
       <DialogTrigger asChild>
         <Button variant="ghost" className="w-5 h-5 shrink-0" size="icon">
-          <Pencil1Icon className="w-3 h-3 shrink-0" />
+          <PencilIcon className="w-3 h-3 shrink-0" />
         </Button>
       </DialogTrigger>
       <DialogContent className="md:max-w-2xl">

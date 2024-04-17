@@ -17,7 +17,7 @@ import { RoleGuard } from "@/hooks/useHabilitation";
 import { SEP } from "@/pages/api/quick-edit/download";
 import { HeadTitle } from "@components/helpers/head/title";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@components/ui/tooltip";
-import { ChevronUpIcon, DownloadIcon, QuestionMarkCircledIcon, UploadIcon } from "@radix-ui/react-icons";
+import { ChevronUpIcon, DownloadIcon, MessageCircleQuestionIcon, UploadIcon } from "lucide-react";
 import { Router } from "next/router";
 
 /**
@@ -254,7 +254,7 @@ const QuickEdit: NextPage = () => {
                   } ring-opengeo ring-opacity-75`}
                 >
                   <span className="inline-flex items-center gap-x-2">
-                    <QuestionMarkCircledIcon className="w-4 h-4" />
+                    <MessageCircleQuestionIcon className="w-4 h-4" />
                     Aide
                   </span>
                   <div className="inline-flex items-center space-x-3">

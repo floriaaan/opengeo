@@ -11,7 +11,7 @@ import { HeadTitle } from "@components/helpers/head/title";
 import { Badge } from "@components/ui/badge";
 import { Button } from "@components/ui/button";
 import { DataTable } from "@components/ui/data-table";
-import { ReloadIcon } from "@radix-ui/react-icons";
+import { RefreshCwIcon } from "lucide-react";
 
 const SuggestionsListPage = () => {
   const { data: api, loading, revalidate } = useFetch<APIResult<ResultGET>>("/api/suggestion");
@@ -31,7 +31,7 @@ const SuggestionsListPage = () => {
             </div>
             <div className="ml-auto">
               <Button onClick={revalidate} disabled={loading}>
-                <ReloadIcon className={cn("mr-2 h-4 w-4", loading && "animate-spin")} />
+                <RefreshCwIcon className={cn("mr-2 h-4 w-4", loading && "animate-spin")} />
                 Rafraîchir
               </Button>
             </div>

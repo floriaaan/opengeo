@@ -2,7 +2,7 @@
 
 import { HeadTitle } from "@components/helpers/head/title";
 import { Button } from "@components/ui/button";
-import { ArrowLeftIcon, EnvelopeClosedIcon } from "@radix-ui/react-icons";
+import { ArrowLeftIcon, MailIcon } from "lucide-react";
 import { useRouter } from "next/router";
 import packageInfo from "package.json";
 const { author, email } = packageInfo;
@@ -41,7 +41,7 @@ export const ErrorPage = ({
                   )}`}
                   className="justify-center"
                 >
-                  <EnvelopeClosedIcon className="w-4 h-4 shrink-0" />
+                  <MailIcon className="w-4 h-4 shrink-0" />
                   <span>Contacter le {author}</span>
                 </a>
               </Button>

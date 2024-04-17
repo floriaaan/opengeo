@@ -2,8 +2,8 @@ import { GenericObject } from "@/types/generic-object";
 import { useCartographie } from "@components/map/context";
 import { Button } from "@components/ui/button";
 import { Toggle } from "@components/ui/toggle";
-import { Cross2Icon, TableIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
+import { TableIcon, XIcon } from "lucide-react";
 import { useState } from "react";
 
 import { Badge } from "@components/ui";
@@ -55,7 +55,7 @@ export const Table = () => {
           >
             <div className="sticky top-0 left-0 right-0 inline-flex justify-end w-full p-2 bg-gray-100 rounded-t-lg handle">
               <Button variant="destructive" onClick={() => setOpen(false)}>
-                <Cross2Icon className="w-4 h-4 shrink-0" />
+                <XIcon className="w-4 h-4 shrink-0" />
                 <span className="text-xs font-title">Fermer</span>
               </Button>
             </div>

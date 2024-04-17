@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { SubObjectType } from "@/models";
 import { APIResult } from "@/types/api";
 import { Sidebar } from "@components/layouts/admin/sidebar";
-import { ListBulletIcon, PlusIcon } from "@radix-ui/react-icons";
+import { ListIcon, PlusIcon } from "lucide-react";
 import { ReactNode, createContext, useContext, useMemo } from "react";
 
 const SubObjectContext = createContext({
@@ -43,7 +43,7 @@ export const SubObjectLayout = ({ children }: { children: ReactNode }) => {
                 {
                   name: "Liste des sous-objets",
                   url: "/admin/plugins/sub-object",
-                  icon: <ListBulletIcon className="w-4 h-4 shrink-0" />,
+                  icon: <ListIcon className="w-4 h-4 shrink-0" />,
                 },
                 {
                   name: "Créer un nouveau sous-objet",

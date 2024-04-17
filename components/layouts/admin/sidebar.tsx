@@ -3,8 +3,8 @@ import { useRouter } from "next/router";
 
 import { SidebarType, useSidebarContext } from "@components/layouts/admin";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@components/ui/tooltip";
-import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
+import { ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 import { ReactNode } from "react";
 
 type Node = JSX.Element | ReactNode | (() => JSX.Element | ReactNode);
@@ -27,7 +27,7 @@ const overflowClassNames = "max-h-[calc(100vh-4rem-3rem)] overflow-x-hidden over
 /**
  * A React component that renders a sidebar navigation menu.
  *
- * @remarks The component includes props for setting the navigation items and the type of the sidebar. The component uses the `ArrowLeftIcon` component from the `@radix-ui/react-icons` library to render a "collapse" button for the sidebar. The component uses the `Link` component from the `next/link` library to render the navigation items as links. The component is used in the `AdminLayout` component for rendering the sidebar navigation menu.
+ * @remarks The component includes props for setting the navigation items and the type of the sidebar. The component uses the `ArrowLeftIcon` component from the `lucide-react` library to render a "collapse" button for the sidebar. The component uses the `Link` component from the `next/link` library to render the navigation items as links. The component is used in the `AdminLayout` component for rendering the sidebar navigation menu.
  *
  * @param navigation - An array of navigation items, where each item is an object with a label and an array of value objects that represent the links to render.
  * @param type - The type of the sidebar. "main" or "secondary".

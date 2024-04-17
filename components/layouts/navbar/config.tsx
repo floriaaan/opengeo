@@ -1,5 +1,4 @@
-import { MapIcon } from "@components/ui/icons/map";
-import { EnvelopeClosedIcon, ListBulletIcon, QuestionMarkCircledIcon } from "@radix-ui/react-icons";
+import { ListIcon, MailIcon, MapIcon, MessageCircleQuestionIcon } from "lucide-react";
 import packageInfo from "package.json";
 const { email } = packageInfo;
 
@@ -28,7 +27,7 @@ export const NAVIGATIONS: {
   {
     name: "Liste des objets",
     href: "/generic-object",
-    icon: <ListBulletIcon {...cls} />,
+    icon: <ListIcon {...cls} />,
     type: "link",
   },
   //   {
@@ -40,13 +39,13 @@ export const NAVIGATIONS: {
   {
     name: "Contacter l'équipe",
     href: `mailto:${email}`,
-    icon: <EnvelopeClosedIcon {...cls} />,
+    icon: <MailIcon {...cls} />,
     type: "action",
   },
   {
     name: "Remonter un problème",
     href: `mailto:${email}?subject=Problème sur OpenGeo`,
-    icon: <QuestionMarkCircledIcon {...cls} />,
+    icon: <MessageCircleQuestionIcon {...cls} />,
     type: "action",
   },
 ];

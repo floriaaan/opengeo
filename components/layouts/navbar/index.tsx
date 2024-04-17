@@ -8,8 +8,8 @@ import { MobileMenu } from "@components/layouts/navbar/mobile";
 import { Logo } from "@components/ui/Logo";
 import { UserWithFallback } from "@components/ui/avatar/base";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@components/ui/tooltip";
-import { MixerVerticalIcon } from "@radix-ui/react-icons";
 import classNames from "classnames";
+import { SlidersVerticalIcon } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -70,7 +70,7 @@ export const Navbar = () => {
                             (habilitations_pending || suggestions_pending) && "bg-gray-100",
                           )}
                         >
-                          <MixerVerticalIcon
+                          <SlidersVerticalIcon
                             className={`w-4 h-4 transition group-data-[active=true]:text-opengeo-500 duration-300 group-hover:text-opengeo-500 text-gray-700 dark:group-hover:text-opengeo-100`}
                           />
                           {habilitations_pending + suggestions_pending > 0 && (

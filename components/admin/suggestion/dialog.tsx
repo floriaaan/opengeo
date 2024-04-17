@@ -5,7 +5,7 @@ import { SuggestionDocument } from "@/models/Suggestion";
 import { Badge } from "@components/ui/badge";
 import { Button } from "@components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@components/ui/dialog";
-import { ArrowRightIcon, CheckIcon, EyeOpenIcon, TrashIcon } from "@radix-ui/react-icons";
+import { ArrowRightIcon, CheckIcon, EyeIcon, TrashIcon } from "lucide-react";
 import Link from "next/link";
 import { toast } from "sonner";
 
@@ -23,7 +23,7 @@ export const SuggestionDialog = ({
     <Dialog>
       <DialogTrigger asChild>
         <Button variant={"outline"} size="icon">
-          <EyeOpenIcon className="w-4 h-4" />
+          <EyeIcon className="w-4 h-4" />
           <span className="sr-only">Voir la suggestion</span>
         </Button>
       </DialogTrigger>
@@ -60,7 +60,7 @@ export const SuggestionDialog = ({
           <div className="inline-flex items-center gap-2 m-0 mr-6">
             <Button variant="outline" size="icon" asChild>
               <Link target="_blank" href={`/generic-object/${object._id}`} rel="noopener noreferrer">
-                <EyeOpenIcon className="w-4 h-4" />
+                <EyeIcon className="w-4 h-4" />
                 <span className="sr-only">Voir le site</span>
               </Link>
             </Button>

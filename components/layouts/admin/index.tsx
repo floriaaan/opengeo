@@ -9,15 +9,15 @@ import { Badge } from "@components/ui/badge";
 
 import {
   BackpackIcon,
+  BoxIcon,
   ClipboardIcon,
-  CubeIcon,
-  DashboardIcon,
-  IdCardIcon,
-  LockClosedIcon,
-  MagicWandIcon,
-  MixerVerticalIcon,
-  Pencil1Icon,
-} from "@radix-ui/react-icons";
+  LayoutDashboard,
+  LockIcon,
+  PencilIcon,
+  ScanFaceIcon,
+  ShapesIcon,
+  WandSparkles,
+} from "lucide-react";
 import dynamic from "next/dynamic";
 import { ReactNode, createContext, useContext } from "react";
 
@@ -29,7 +29,7 @@ const mainNavigation = [
       {
         name: "Tableau de bord",
         url: "/admin",
-        icon: <MixerVerticalIcon {...cls} />,
+        icon: <LayoutDashboard {...cls} />,
       },
     ],
   },
@@ -39,12 +39,12 @@ const mainNavigation = [
       {
         name: "Gestion des objets",
         url: "/admin/plugins/generic-object",
-        icon: <CubeIcon {...cls} />,
+        icon: <BoxIcon {...cls} />,
       },
       {
         name: "Gestion des sous-objets",
         url: "/admin/plugins/sub-object",
-        icon: <DashboardIcon {...cls} />,
+        icon: <ShapesIcon {...cls} />,
       },
       {
         name: "Fiches synthèse",
@@ -54,7 +54,7 @@ const mainNavigation = [
       {
         name: "Suggestions de modif.",
         url: "/admin/plugins/suggestions",
-        icon: <MagicWandIcon {...cls} />,
+        icon: <WandSparkles {...cls} />,
         badge: {
           normal: () => {
             // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -83,7 +83,7 @@ const mainNavigation = [
       {
         name: "Habilitations",
         url: "/admin/plugins/habilitations",
-        icon: <LockClosedIcon {...cls} />,
+        icon: <LockIcon {...cls} />,
         badge: {
           normal: () => {
             // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -112,7 +112,7 @@ const mainNavigation = [
       {
         name: "Modification rapide",
         url: "/admin/plugins/quick-edit",
-        icon: <Pencil1Icon {...cls} />,
+        icon: <PencilIcon {...cls} />,
       },
     ],
   },
@@ -122,7 +122,7 @@ const mainNavigation = [
       {
         name: "Logs",
         url: "/admin/logs",
-        icon: <IdCardIcon {...cls} />,
+        icon: <ScanFaceIcon {...cls} />,
       },
 
       {
@@ -130,16 +130,6 @@ const mainNavigation = [
         url: "/admin/super/generic-object",
         icon: <BackpackIcon {...cls} />,
       },
-      // {
-      //   name: "Tous les sous-objets",
-      //   url: "/admin/super/sub-object",
-      //   icon: <DashboardIcon {...cls} />,
-      // },
-      // {
-      //   name: "Tout les modèles",
-      //   url: "/admin/super/template",
-      //   icon: <CardStackIcon {...cls} />,
-      // },
     ],
   },
 ];

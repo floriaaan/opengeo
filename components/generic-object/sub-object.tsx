@@ -12,9 +12,9 @@ import { roles } from "@components/habilitations/roles";
 import { Suggestion } from "@components/suggestion/dialog";
 import { Badge } from "@components/ui/badge";
 import { Button } from "@components/ui/button";
-import { DrawingPinFilledIcon, DrawingPinIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 import { formatRelative } from "date-fns";
 import { fr } from "date-fns/locale";
+import { ExternalLinkIcon, PinIcon, PinOffIcon } from "lucide-react";
 import { toast } from "sonner";
 
 export const SubObject = ({ data: sub, object }: { data: SubObjectType[]; object: GenericObject }) => {
@@ -99,7 +99,7 @@ export const SubObject = ({ data: sub, object }: { data: SubObjectType[]; object
                   }
                 }}
               >
-                {isPinned ? <DrawingPinFilledIcon className="w-4 h-4" /> : <DrawingPinIcon className="w-4 h-4" />}
+                {isPinned ? <PinOffIcon className="w-4 h-4" /> : <PinIcon className="w-4 h-4" />}
               </Button>
             )}
           </div>

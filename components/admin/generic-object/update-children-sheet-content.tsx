@@ -7,7 +7,7 @@ import { GenericObject } from "@/types/generic-object";
 import { Button } from "@components/ui/button";
 import { Checkbox } from "@components/ui/checkbox";
 import { Input } from "@components/ui/input";
-import { Cross1Icon, PlusIcon, TrashIcon } from "@radix-ui/react-icons";
+import { PlusIcon, TrashIcon, XIcon } from "lucide-react";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { toast } from "sonner";
 
@@ -92,7 +92,7 @@ export const UpdateChildrenSheetContent = ({
                       }
                     }}
                   >
-                    <Cross1Icon className="w-3 h-3" />
+                    <XIcon className="w-3 h-3" />
                   </Button>
                 </div>
                 <div className="flex flex-col gap-1">
@@ -212,7 +212,7 @@ export const UpdateChildrenSheetContent = ({
           Supprimer
         </Button>
         <Button variant="secondary" onClick={closeModal} className="w-full">
-          <Cross1Icon className="w-4 h-4" />
+          <XIcon className="w-4 h-4" />
           Fermer
         </Button>
       </div>

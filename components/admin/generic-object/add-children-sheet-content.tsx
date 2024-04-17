@@ -4,7 +4,7 @@ import { SubObjectType } from "@/models";
 import { GenericObject } from "@/types/generic-object";
 import { Button } from "@components/ui/button";
 import { Checkbox } from "@components/ui/checkbox";
-import { PlusIcon, TrashIcon } from "@radix-ui/react-icons";
+import { PlusIcon, TrashIcon } from "lucide-react";
 import { Dispatch, useEffect, useState } from "react";
 
 /**

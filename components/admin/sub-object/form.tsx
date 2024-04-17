@@ -8,16 +8,16 @@ import { Input } from "@components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@components/ui/select";
 import { Switch } from "@components/ui/switch";
 import { Textarea } from "@components/ui/textarea";
+import { regions } from "@resources/regions";
 import {
   BackpackIcon,
   CheckIcon,
-  Link1Icon,
-  LockClosedIcon,
-  LockOpen1Icon,
-  LockOpen2Icon,
-  UpdateIcon,
-} from "@radix-ui/react-icons";
-import { regions } from "@resources/regions";
+  LinkIcon,
+  LockIcon,
+  LockKeyholeOpenIcon,
+  LockOpenIcon,
+  RefreshCwIcon,
+} from "lucide-react";
 import { Dispatch, ReactNode, SetStateAction, useMemo, useState } from "react";
 
 /**
@@ -105,15 +105,15 @@ export const SubObjectForm = ({
             <span className="text-sm font-bold text-opengeo">{"Niveau d'accès"}</span>
             <div className="relative w-full">
               {authorization === "PZW_USER" && (
-                <LockOpen2Icon className="absolute w-4 h-4 transform -translate-y-1/2 pointer-events-none top-1/2 left-3" />
+                <LockOpenIcon className="absolute w-4 h-4 transform -translate-y-1/2 pointer-events-none top-1/2 left-3" />
               )}
               {(authorization === "PZW_MANAGER" ||
                 authorization === "PZW_RESPONSABLE-SITE" ||
                 authorization === "PZW_CODIR") && (
-                <LockOpen1Icon className="absolute w-4 h-4 transform -translate-y-1/2 pointer-events-none top-1/2 left-3" />
+                <LockKeyholeOpenIcon className="absolute w-4 h-4 transform -translate-y-1/2 pointer-events-none top-1/2 left-3" />
               )}
               {(authorization === "PZW_ADMINISTRATEUR-REGION" || authorization === "PZW_ADMINISTRATEUR-GENERAL") && (
-                <LockClosedIcon className="absolute w-4 h-4 transform -translate-y-1/2 pointer-events-none top-1/2 left-3" />
+                <LockIcon className="absolute w-4 h-4 transform -translate-y-1/2 pointer-events-none top-1/2 left-3" />
               )}
 
               <Select
@@ -164,7 +164,7 @@ export const SubObjectForm = ({
                   htmlFor="auto-link"
                   className="inline-flex items-end text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 gap-x-1"
                 >
-                  <Link1Icon className="w-4 h-4" />
+                  <LinkIcon className="w-4 h-4" />
                   {"Lier automatiquement et créer une instance de ce sous-objet dans tout les objets de l'entité "}
                   {entity} ?
                 </label>
@@ -181,7 +181,7 @@ export const SubObjectForm = ({
         <div className="inline-flex items-center justify-end gap-4">
           {actions}
           <Button onClick={handleSubmit} disabled={isLoading}>
-            {isLoading ? <UpdateIcon className="w-4 h-4 animate-spin" /> : <CheckIcon className="w-4 h-4" />}
+            {isLoading ? <RefreshCwIcon className="w-4 h-4 animate-spin" /> : <CheckIcon className="w-4 h-4" />}
             {isLoading ? "En cours..." : submitText}
           </Button>
         </div>

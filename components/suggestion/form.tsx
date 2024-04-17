@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { fetcher } from "@/lib/fetchers";
 import { Textarea } from "@components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { PaperPlaneIcon } from "@radix-ui/react-icons";
+import { SendIcon } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
@@ -84,7 +84,7 @@ export function SuggestionForm({
         />
         <div className="inline-flex justify-end w-full ">
           <Button type="submit">
-            <PaperPlaneIcon />
+            <SendIcon className="w-4 h-4 shrink-0" />
             Envoyer
           </Button>
         </div>

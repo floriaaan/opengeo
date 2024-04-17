@@ -6,7 +6,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@components/ui/avatar";
 import { ScrollArea } from "@components/ui/scroll-area";
 import { SheetContent, SheetHeader, SheetTitle } from "@components/ui/sheet";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@components/ui/tooltip";
-import { CheckIcon, CubeIcon } from "@radix-ui/react-icons";
+import { CheckIcon, BoxIcon } from "lucide-react";
 
 import Markdown from "markdown-to-jsx";
 
@@ -87,7 +87,7 @@ const VersionComponent = (v: Version) => {
                 </div>
               ) : (
                 <div className="flex items-center justify-center w-8 h-8 bg-indigo-200 rounded-full ring-8 ring-white">
-                  <CubeIcon className="w-4 h-4 text-indigo-800" />
+                  <BoxIcon className="w-4 h-4 text-indigo-800" />
                 </div>
               )}
             </div>

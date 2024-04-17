@@ -3,8 +3,8 @@ import { GenericObject } from "@/types/generic-object";
 import { useCartographie } from "@components/map/context";
 import { Breadcrumb, Page } from "@components/ui/breadcrumb";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@components/ui/tooltip";
-import { AvatarIcon, ColorWheelIcon, CrossCircledIcon, MixIcon, SewingPinFilledIcon } from "@radix-ui/react-icons";
 import { regions } from "@resources/regions";
+import { CircleUserRoundIcon, CircleXIcon, MapPinIcon, PaletteIcon, ShapesIcon } from "lucide-react";
 import { Dispatch, SetStateAction, useMemo } from "react";
 
 /**
@@ -43,7 +43,7 @@ export const Filters = (): JSX.Element => {
         pages={[
           {
             name: region || "Toutes les régions",
-            icon: <SewingPinFilledIcon className="hidden w-4 h-4 shrink-0 lg:block" />,
+            icon: <MapPinIcon className="hidden w-4 h-4 shrink-0 lg:block" />,
             children: regions.map((e) => ({
               name: e || "Toutes les régions",
               selected: e === region,
@@ -55,7 +55,7 @@ export const Filters = (): JSX.Element => {
           },
           {
             name: "Sous-objets",
-            icon: <MixIcon className="hidden w-4 h-4 shrink-0 lg:block" />,
+            icon: <ShapesIcon className="hidden w-4 h-4 shrink-0 lg:block" />,
             multiple: true,
             children: options.map((e) => ({
               name: e.metadata.label,
@@ -91,7 +91,7 @@ export const Filters = (): JSX.Element => {
               <TooltipProvider delayDuration={0}>
                 <Tooltip>
                   <TooltipTrigger>
-                    <CrossCircledIcon className="w-4 h-4 shrink-0 lg:block" />
+                    <CircleXIcon className="w-4 h-4 shrink-0 lg:block" />
                   </TooltipTrigger>
                   <TooltipContent sideOffset={16} side="bottom">
                     Supprimer tous les filtres
@@ -137,7 +137,7 @@ const createContactSubFilter = (
 
   return {
     name: selected_subobject.metadata.label,
-    icon: <AvatarIcon className="w-4 h-4 shrink-0 lg:block" />,
+    icon: <CircleUserRoundIcon className="w-4 h-4 shrink-0 lg:block" />,
     children: children,
     multiple: true,
   } as Page;
@@ -150,7 +150,7 @@ const createOccupationSubFilter = (
 ) => {
   return {
     name: "Occupation",
-    icon: <ColorWheelIcon className="w-4 h-4 shrink-0 lg:block" />,
+    icon: <PaletteIcon className="w-4 h-4 shrink-0 lg:block" />,
     children: selected_subobject.values.map((e) => ({
       name: e.label.toString(),
       onClick: () =>

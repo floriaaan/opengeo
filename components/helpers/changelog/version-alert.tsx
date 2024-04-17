@@ -5,7 +5,7 @@ import { APIResult } from "@/types/api";
 import { ChangelogSheetContent } from "@components/helpers/changelog/sheet-content";
 import { Button } from "@components/ui";
 import { Sheet, SheetTrigger } from "@components/ui/sheet";
-import { RocketIcon } from "@radix-ui/react-icons";
+import { RocketIcon } from "lucide-react";
 import { useMemo, useState } from "react";
 
 export const VersionAlert = () => {

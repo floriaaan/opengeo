@@ -4,7 +4,7 @@ import { GenericObject } from "@/types/generic-object";
 import { SyntheseType } from "@/types/synthese";
 import { Synthese } from "@components/synthese";
 import { Button } from "@components/ui";
-import { ArrowLeftIcon } from "@radix-ui/react-icons";
+import { ArrowLeftIcon } from "lucide-react";
 import { GetServerSideProps } from "next";
 import Link from "next/link";
 import { useMemo } from "react";

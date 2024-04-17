@@ -13,15 +13,9 @@ import { APIResult } from "@/types/api";
 import { HeadTitle } from "@components/helpers/head/title";
 import { Button } from "@components/ui/button";
 
-import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  DoubleArrowLeftIcon,
-  DoubleArrowRightIcon,
-  UpdateIcon,
-} from "@radix-ui/react-icons";
 import { format } from "date-fns";
 import fr from "date-fns/locale/fr";
+import { ChevronLeftIcon, ChevronRightIcon, ChevronsLeftIcon, ChevronsRightIcon, RefreshCwIcon } from "lucide-react";
 const PAGE_SIZE = 10;
 
 /**
@@ -70,7 +64,7 @@ const LogsPage: NextPage = () => {
             <div className="inline-flex items-center gap-2 px-2 py-2 mt-4 w-fit">
               {/* <Input placeholder="Rechercher..." /> */}
               <Button onClick={revalidate} disabled={loading} className="button-gray w-fit">
-                <UpdateIcon className={cn("w-4 h-4", loading && "animate-spin")} />
+                <RefreshCwIcon className={cn("w-4 h-4", loading && "animate-spin")} />
                 Rafraîchir
               </Button>
 
@@ -82,7 +76,7 @@ const LogsPage: NextPage = () => {
                   disabled={!previousEnabled}
                   className="px-2 button-gray w-fit"
                 >
-                  <DoubleArrowLeftIcon className="w-4 h-4 shrink-0" />
+                  <ChevronsLeftIcon className="w-4 h-4 shrink-0" />
                 </Button>
                 <Button
                   size="icon"
@@ -109,7 +103,7 @@ const LogsPage: NextPage = () => {
                   onClick={() => setPage(totalPages - 1)}
                   disabled={!nextEnabled}
                 >
-                  <DoubleArrowRightIcon className="w-4 h-4 shrink-0" />
+                  <ChevronsRightIcon className="w-4 h-4 shrink-0" />
                 </Button>
               </div>
             </div>

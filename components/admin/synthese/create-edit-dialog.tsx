@@ -42,7 +42,7 @@ import { getAllSubObject } from "@/lib/fetchers/sub-object";
 import { log } from "@/lib/log";
 import { SyntheseChild, SyntheseType } from "@/types/synthese";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { CaretSortIcon, CheckIcon, Cross1Icon, DragHandleDots2Icon, UpdateIcon } from "@radix-ui/react-icons";
+import { ArrowUpDownIcon, CheckIcon, GripIcon, RefreshCwIcon, XIcon } from "lucide-react";
 import { DragDropContext, Draggable, DraggableChildrenFn, Droppable, OnDragEndResponder } from "react-beautiful-dnd";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -253,7 +253,7 @@ export const SyntheseCreateEditDialogContent = ({
                                   </div>
                                 ))}
                           </div>
-                          <CaretSortIcon className="w-4 h-4 opacity-50" />
+                          <ArrowUpDownIcon className="w-4 h-4 opacity-50" />
                         </DropdownMenuTrigger>
                         {children.length > 0 && (
                           <Button
@@ -265,7 +265,7 @@ export const SyntheseCreateEditDialogContent = ({
                               form.setValue("children", []);
                             }}
                           >
-                            <Cross1Icon className="w-3 h-3 opacity-70" />
+                            <XIcon className="w-3 h-3 opacity-70" />
                           </Button>
                         )}
                       </div>
@@ -311,11 +311,11 @@ export const SyntheseCreateEditDialogContent = ({
           </div>
           <div className="inline-flex items-center justify-end w-full gap-2 ">
             <Button type="button" onClick={() => onCloseModal()} variant="outline">
-              <Cross1Icon className="w-4 h-4" />
+              <XIcon className="w-4 h-4" />
               Annuler
             </Button>
             <Button type="submit" disabled={loading_submit}>
-              {loading_submit ? <UpdateIcon className="w-4 h-4 animate-spin" /> : <CheckIcon className="w-4 h-4" />}
+              {loading_submit ? <RefreshCwIcon className="w-4 h-4 animate-spin" /> : <CheckIcon className="w-4 h-4" />}
               {loading_submit
                 ? "En cours..."
                 : isEdit
@@ -352,7 +352,7 @@ const ReorderItems = ({
                       {...provided.dragHandleProps}
                       className="inline-flex items-center justify-center p-2 text-sm font-medium transition-colors bg-transparent border rounded-md whitespace-nowrap focus-visible:outline-none border-input hover:bg-accent hover:text-accent-foreground focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 gap-x-2 h-9"
                     >
-                      <DragHandleDots2Icon className="w-4 h-4" />
+                      <GripIcon className="w-4 h-4" />
                       <Badge>{index + 1}</Badge>
                       {a.metadata.label}
                     </div>
