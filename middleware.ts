@@ -40,12 +40,12 @@ export async function middleware(request: NextRequest) {
     const { id, cn } = userCookies || { id: "?", cn: "Inconnu" };
 
     // Log the request to the console
-    // console.log([new Date().toISOString(), method, path].map((s) => s || "undefined").join("\t"));
-    log.debug(
-      `${utils.bold(utils.yellow(new Date().toISOString()))}\t ${utils.bold(
-        method === "GET" ? utils.green(method) : utils.red(method),
-      )}\t ${utils.bold(utils.blue(path))}`,
-    );
+    if (process.env.NEXT_PUBLIC_LOCAL !== "true")
+      log.debug(
+        `${utils.bold(utils.yellow(new Date().toISOString()))}\t ${utils.bold(
+          method === "GET" ? utils.green(method) : utils.red(method),
+        )}\t ${utils.bold(utils.blue(path))}`,
+      );
 
     // Log the request to the database
 
