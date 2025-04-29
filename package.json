@@ -47,7 +47,7 @@
     "clsx": "^2.0.0",
     "date-fns": "^2.29.3",
     "dotenv": "^16.3.1",
-    "formidable": "^3.5.1",
+    "formidable": "^3.5.4",
     "gray-matter": "^4.0.3",
     "handsontable": "^15.1.0",
     "leaflet": "^1.9.3",
